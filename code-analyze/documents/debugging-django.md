@@ -1,0 +1,1 @@
+-   [ ] [Understanding Django Structure](./understanding-Django-structure.md)
