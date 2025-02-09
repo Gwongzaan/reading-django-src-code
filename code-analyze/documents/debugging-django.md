@@ -1,2 +1,3 @@
 -   [ ] [Understanding Django Structure](./understanding-Django-structure.md)
 -   [ ] [Setup and setuptools](./setup-and-setuptools.md)
+-   [ ] [How `django-admin` is Generated](./how-django-admin-is-generated.md)
