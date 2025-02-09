@@ -1,1 +1,2 @@
 -   [ ] [Understanding Django Structure](./understanding-Django-structure.md)
+-   [ ] [Setup and setuptools](./setup-and-setuptools.md)
