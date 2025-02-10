@@ -75,12 +75,10 @@ Debugger gives you the opportunity to follow the execution flow, even line by li
 ```shell
 mkdir -p code-analyze/documents
 python -m venv .venv
-wget https://github.com/django/django/archive/refs/tags/5.0.zip
-unzip 5.0.zip
-rm 5.0.zip
-cd django-5.0
+git clone -b stable/5.0.x https://github.com/django/django.git
+cd django
 pip install -e .
-# edit .gitignore to ignore django-5.0/*
+# edit .gitignore to ignore django/*
 nvim .gitignore
 
 ```
