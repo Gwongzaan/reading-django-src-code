@@ -1,15 +1,15 @@
 # Purpose
 
--   Becoming excellent by learning from the excellent
+- Becoming excellent by learning from the excellent
 
-    Django is an excellent web framework developed and maintained by excellent developers.
-    By reading and understanding the source code, understanding the design of django, will definitely boost your programming skills,
-    and system designing skills, no matter what programming language you are or will be using,
-    the idea and concepts of programming and system design are essentially the same.
+  Django is an excellent web framework developed and maintained by excellent developers.
+  By reading and understanding the source code, understanding the design of django, will definitely boost your programming skills,
+  and system designing skills, no matter what programming language you are or will be using,
+  the idea and concepts of programming and system design are essentially the same.
 
--   Discovering advanced usage of the framework
+- Discovering advanced usage of the framework
 
-# [Analyzing Notes](./code-analyze/documents/debugging-django.md)
+# [Analyzing Notes](./code-analysis/documents/debugging-django.md)
 
 # Why Choosing version 5.0.x
 
@@ -32,11 +32,11 @@
 
 for example
 
--   How does the command `django-admin startproject project_name` work?
+- How does the command `django-admin startproject project_name` work?
 
--   What is the difference between `python manager.py shell` and the interactive mode of python
+- What is the difference between `python manager.py shell` and the interactive mode of python
 
--   How does the built-in ORM framework work?
+- How does the built-in ORM framework work?
 
 ## Setup Debugging Environment
 
@@ -46,46 +46,41 @@ Debugger gives you the opportunity to follow the execution flow, even line by li
 
 ### Basic Concepts of Debugging
 
--   Variables
--   Watch
--   Call Stack
--   Breakpoints
+- Variables
+- Watch
+- Call Stack
+- Breakpoints
 
 ### Basic Operations of Debugging Using VS Code
 
--   add/edit/remove breakpoint on the editor
--   continue : F5
--   stop: Shift + F5
--   step over : F10,
--   step into : F11,
--   step out : Shift + F11
--   Go to Debug console: Shift + Ctrl + Y
--   Open Debug Panel: Shift + Ctrl + D
--   Start Debug: F5
+- add/edit/remove breakpoint on the editor
+- continue : F5
+- stop: Shift + F5
+- step over : F10,
+- step into : F11,
+- step out : Shift + F11
+- Go to Debug console: Shift + Ctrl + Y
+- Open Debug Panel: Shift + Ctrl + D
+- Start Debug: F5
 
 ### [Using VS Code for Python Debugging: configuring `launch.json`](https://code.visualstudio.com/docs/python/debugging)
 
 ### Setup IDE
 
--   install VSCode, and Vim plugin.
--   create a [launch.json](.vscode/launch.json) file for debugging configuration
+- install VSCode, and Vim plugin.
+- create a [launch.json](.vscode/launch.json) file for debugging configuration
 
 ### Install Django in Editable Mode
 
 ```shell
-git clone --branch 5.0 https://github.com/django/django.git
-
-# remove the .git directory for the original repo
-rm .git
-# initialize your own git repository in the same working directory
-python -m venv .venv
-# install django in editable mode
-pip install -e .
-# all all file  to .gitignore
-for f in `ls`; do echo ${a} >> .gitignore; done
-# edit .gitignore to exclude any file you want to keep in the git repo
-nvim .gitignore
-# make a directory for taking analyzing notes
 mkdir -p code-analyze/documents
+python -m venv .venv
+wget https://github.com/django/django/archive/refs/tags/5.0.zip
+unzip 5.0.zip
+rm 5.0.zip
+cd django-5.0
+pip install -e .
+# edit .gitignore to ignore django-5.0/*
+nvim .gitignore
 
 ```
