@@ -78,7 +78,25 @@ python -m venv .venv
 git clone -b stable/5.0.x https://github.com/django/django.git
 cd django
 pip install -e .
+pip install pywatchman
+pip install colorama
 # edit .gitignore to ignore django/*
 nvim .gitignore
 
 ```
+
+### Notes
+
+When debugging using VS Code, pay attention to the BREAKPOINT section. select different options of `Raised Exception`, `Uncaught Exceptions`, `User Uncauth Exceptions` will have different effect.
+
+# Start with High Level Components
+
+Begin by exploring high-level components that you’re already familiar with from using Django:
+
+`URL Routing`: Look at django/urls/ to understand how URL patterns are resolved.
+
+`Models and ORM`: Dive into django/db/models/ to see how models and the ORM are implemented.
+
+`Views`: Explore django/views/ to understand how views process requests and return responses.
+
+`Templates`: Check out django/template/ to see how the template engine works.
